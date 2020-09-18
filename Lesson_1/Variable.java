@@ -1,15 +1,22 @@
 public class Variable {
 	public static void main(String[] args) {
-		byte core = 8;
+		byte core = 2;
 		short hdd = 1000;
-		int win = 10;
-		long ram = 65536;
-		float e = -1234;
-		double ghz = 3.6;
-		char g = 123;
-		boolean monitor = true;
+		int videoRAM = 8000;
+		long ram = 32536;
+		float speedGPU = 1036;
+		double speedCPU = 2.5;
+		char name = 'A';
+		boolean isWork = true;
 
-		System.out.println("Кол-во ядер - " + core + " " + ghz + " GHz. ОЗУ " + ram + " Операционная система Win " + win + 
-		" Жесткий диск " + hdd + " GB" + ". " + monitor + " Монитор." + " В кармане " + e + " денег.");
+		System.out.println("Количество ядер - " + core);
+		System.out.println("Частота процессора - " + speedCPU);
+		System.out.println("Оперативная память - " + ram);
+		System.out.println("Частота графического процессора - " + speedGPU);
+		System.out.println("Видео память - " + videoRAM);
+		System.out.println("Объем жесткого диска - " + hdd);
+		System.out.println("Name " + name);
+		System.out.println("Рабочее состояние - " + isWork);
+		
 	}
 }
