@@ -1,6 +1,5 @@
 public class ConditionalStatement {
-	public static void main(String[] args) {
-
+    public static void main(String[] args) {
         int age = 21;
         if (age > 20) {
             System.out.println("Доступ разрешён!");
@@ -21,11 +20,11 @@ public class ConditionalStatement {
             System.out.println("Выше нормы");
         }
 
-        int firstSimName = 'I';
-        if (firstSimName == 'M') {
+        int firstNameLetter = 'I';
+        if (firstNameLetter == 'M') {
             System.out.println("Maria");
-        } else if (firstSimName == 'I') {
+        } else if (firstNameLetter == 'I') {
             System.out.println("Ivan");
         }
-	}
+    }
 }
