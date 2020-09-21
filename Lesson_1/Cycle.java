@@ -4,18 +4,18 @@ public class Cycle {
             System.out.println(i);
         }
 
-        int numbers1 = 6;
-        while(numbers1 >= -6) {
-            System.out.println(numbers1);
-            numbers1 = numbers1 - 2;
+        int counter1 = 6;
+        while(counter1 >= -6) {
+            System.out.println(counter1);
+            counter1 -= 2;
         }
 
-        int numbers2 = 11;
-        int count = 0;
+        int counter2 = 11;
+        int sumOdd = 0;
         do {
-            count = count + numbers2;
-            numbers2 = numbers2 + 2;
-        } while (numbers2 < 20);
-        System.out.println(count);
+            sumOdd += counter2;
+            counter2 += 2;
+        } while (counter2 < 20);
+        System.out.println(sumOdd);
     }
 }
