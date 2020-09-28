@@ -1,5 +1,5 @@
 public class Person {
-	String gender = "mail";
+    String gender = "mail";
     String name = "John";
     int height = 182;
     int weight = 85;
@@ -22,6 +22,6 @@ public class Person {
     }
 
     void learn() {
-    	System.out.println("Я учусь");
+        System.out.println("Я учусь");
     }
 }
