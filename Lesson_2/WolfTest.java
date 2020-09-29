@@ -4,7 +4,7 @@ public class WolfTest {
         wolf.setGender("самец");
         wolf.setName("Акела");
         wolf.setWeight(55);
-        wolf.setAge(8);
+        wolf.setAge(9);
         wolf.setColor("серый");
 
         System.out.println("Моё имя " + wolf.getName());

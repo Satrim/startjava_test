@@ -30,6 +30,9 @@ public class Wolf {
     }
 
     public int getAge() {
+        if (age > 8) {
+            System.out.println("Некорректный возраст");
+        }
         return age;
     }
 
