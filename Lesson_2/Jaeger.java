@@ -28,52 +28,52 @@ public class Jaeger {
         this.origin = origin;
     }
 
-    void getOrigin() {
+    public String getOrigin() {
         return origin;
     }
 
-    public setHeight(float height) {
+    void setHeight(float height) {
         this.height = height;
     }
 
-    void getHeight() {
+    public float getHeight() {
         return height;
     }
 
-    public setWeight(float weight) {
+    void setWeight(float weight) {
         this.weight = weight;
     }
 
-    void getWeight() {
+    public float getWeight() {
         return weight;
     }
 
-    public setSpeed(int speed) {
+    void setSpeed(int speed) {
         this.speed = speed;
     }
 
-    void getSpeed() {
+    public int getSpeed() {
         return speed;
     }
 
-    public setStrength(int strength) {
+    void setStrength(int strength) {
         this.strength = strength;
     }
 
-    void getStrength() {
+    public int getStrength() {
         return strength;
     }
 
-    public setArmor(int armor) {
+    void setArmor(int armor) {
         this.armor = armor;
     }
 
-    void getArmor() {
+    public int getArmor() {
         return armor;
     }
 
     public boolean drift() {
-        if (driftSpeed < 5) {
+        if (speed < 5) {
             return false;
         } else {
             return true;
@@ -81,15 +81,15 @@ public class Jaeger {
     }
 
     public void move() {
-        System.out.println("Меняю позицию. Зачем я залез в эту адскую машину, я даже на своих старых жигулях не умею ездить назад");
+        System.out.println("Меняю позицию.");
     }
 
     public String scanKaiju() {
-        return "Сканирую локацию на выявления врагов. Надеюсь я правильно применяю этото метод. Вернусь на базу, почитаю инструкцию";
+        return "Сканирую локацию на выявления врагов.";
     }
 
     public void useVortexCannon() {
-        System.out.println("Произвожу предупредительный выстрел в воздух");
+        System.out.println("Произвожу предупредительный выстрел в воздух.");
     }
 
 
