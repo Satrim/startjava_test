@@ -17,23 +17,18 @@ public class Calculator {
         this.mathOperation = mathOperation;
     }
 
-    public int getResult() {
+    public int calculate() {
         switch (mathOperation) {
             case '+' : 
-                result = firstNumber + secondNumber;
-                break;
+                return firstNumber + secondNumber;
             case '-' :
-                result = firstNumber - secondNumber;
-                break;
+                return firstNumber - secondNumber;
             case '*' :
-                result = firstNumber * secondNumber;
-                break;
+                return firstNumber * secondNumber;
             case '/' :
-                result = firstNumber / secondNumber;
-                break;
+                return firstNumber / secondNumber;
             case '%' :
-                result = firstNumber % secondNumber;
-                break;
+                return firstNumber % secondNumber;
             case '^' :
                 result = 1;
                 for (int i = 0; i < secondNumber; i++) {
