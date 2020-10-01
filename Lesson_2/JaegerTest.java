@@ -1,14 +1,6 @@
 public class JaegerTest {
     public static void main(String[] args) {
-        Jaeger crimsonTyphoon = new Jaeger();
-        crimsonTyphoon.setModelName("Crimson Typhoon");
-        crimsonTyphoon.setMark("Mark-4");
-        crimsonTyphoon.setOrigin("China");
-        crimsonTyphoon.setHeight(76.2f);
-        crimsonTyphoon.setWeight(1.722f);
-        crimsonTyphoon.setSpeed(9);
-        crimsonTyphoon.setStrength(8);
-        crimsonTyphoon.setArmor(6);
+        Jaeger crimsonTyphoon = new Jaeger("Crimson Typhoon", "Mark-4", "China", 76.2f, 1.722f, 9, 8, 6);
 
         System.out.println("Китай. Провинция Юнь Нань. Рисовые поля.");
         System.out.println("Докладывает комантдир боевой еденици Cheung Wei. Боевая еденица " + crimsonTyphoon.getModelName() + " в полной боевой готовности");
@@ -25,15 +17,7 @@ public class JaegerTest {
         System.out.println(crimsonTyphoon.scanKaiju());
         crimsonTyphoon.useVortexCannon();
 
-        Jaeger gipsyDanger = new Jaeger();
-        gipsyDanger.setModelName("Gipsy Danger");
-        gipsyDanger.setMark("Mark-3");
-        gipsyDanger.setOrigin("United States of America");
-        gipsyDanger.setHeight(79.25f);
-        gipsyDanger.setWeight(1.980f);
-        gipsyDanger.setSpeed(7);
-        gipsyDanger.setStrength(8);
-        gipsyDanger.setArmor(6);
+        Jaeger gipsyDanger = new Jaeger("Gipsy Dander", "Mark-3", "United States of America", 79.25f, 1.980f, 7, 8, 6);
 
         System.out.println("====================");
         System.out.println();
