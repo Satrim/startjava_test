@@ -11,7 +11,7 @@ public class GuessNumberTest {
 
         String answer = "";
         while(!answer.equals("нет")) {
-        GuessNumber game = new GuessNumber(player1, player2);
+            GuessNumber game = new GuessNumber(player1, player2);
             game.run();
             while(!answer.equals("да") && !answer.equals("нет")) {
                 System.out.println("Ещё раз? [да][нет]");
