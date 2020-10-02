@@ -2,7 +2,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
-
     private int number;
     private Player player1;
     private Player player2;
@@ -34,5 +33,4 @@ public class GuessNumber {
             else if (number < hiddenNumber) System.out.println("Введенное вами число " + number + " меньше того, что загадал компьютер");
         }
     }
-
 }
