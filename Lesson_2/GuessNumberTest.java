@@ -9,14 +9,14 @@ public class GuessNumberTest {
         Player player2 = new Player(scanner.nextLine());
         System.out.println("Поприветствуем игроков, начнем игру!");
 
-        String answer = "";
-        while(!answer.equals("нет")) {
+        String answer = "да";
+        while(answer.equals("да")) {
             GuessNumber game = new GuessNumber(player1, player2);
             game.run();
-            while(!answer.equals("да") && !answer.equals("нет")) {
+            do {
                 System.out.println("Ещё раз? [да][нет]");
                 answer = scanner.next();
-            }
+            } while(!answer.equals("да") && !answer.equals("нет"));
         }
     }
 }

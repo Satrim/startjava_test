@@ -15,8 +15,9 @@ public class GuessNumber {
     }
 
     public void run() {
-        private int number;
+        
         while(true) {
+            int number;
             System.out.println("Игрок " + player1.getName() + " введите число");
             number = scanner.nextInt();
             if (number == hiddenNumber) {
