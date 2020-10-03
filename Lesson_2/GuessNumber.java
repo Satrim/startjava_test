@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
-    int number;
+    
     private Player player1;
     private Player player2;
     private Random random = new Random();
@@ -15,6 +15,7 @@ public class GuessNumber {
     }
 
     public void run() {
+        private int number;
         while(true) {
             System.out.println("Игрок " + player1.getName() + " введите число");
             number = scanner.nextInt();
