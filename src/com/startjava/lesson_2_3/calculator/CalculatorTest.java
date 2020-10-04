@@ -1,12 +1,13 @@
+package com.startjava.lesson_2_3.calculator;
 import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner scan = new Scanner(System.in, "Cp866");
-        String answer = "";
+        String answer = "да";
 
-        while (!answer.equals("нет")) {
+        while (answer.equals("да")) {
             System.out.print("Введите первое число: ");
             calculator.setFirstNumber(scan.nextInt());
             System.out.print("Введите знак математической операции: ");
@@ -14,12 +15,11 @@ public class CalculatorTest {
             System.out.print("Введите второе число: ");
             calculator.setSecondNumber(scan.nextInt());
             System.out.println(calculator.calculate());
-            answer = "";
-
-            while (!answer.equals("да") && !answer.equals("нет")) {
+            
+            do {
                 System.out.print("Хотите продолжить? [да/нет]: ");
                 answer = scan.next();
-            }
+            } while (!answer.equals("да") && !answer.equals("нет"));
         }
     }
 }
