@@ -1,4 +1,5 @@
 package com.startjava.lesson_2_3.robot;
+
 public class JaegerTest {
     public static void main(String[] args) {
         Jaeger crimsonTyphoon = new Jaeger("Crimson Typhoon", "Mark-4", "China", 76.2f, 1.722f, 9, 8, 6);
