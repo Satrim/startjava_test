@@ -1,2 +1,4 @@
 #ignor .class
 out/
+/.idea/
+/JavaOPS.iml
