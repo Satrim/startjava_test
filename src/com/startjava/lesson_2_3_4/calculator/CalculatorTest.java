@@ -9,7 +9,7 @@ public class CalculatorTest {
         String answer = "да";
         System.out.println("Математические операции: ");
         System.out.println(
-                "    " + "\"+\" - сложение (a + b)\r\n" +
+                        "    " + "\"+\" - сложение (a + b)\r\n" +
                         "    " + "\"-\" - вычетание (a - b)\r\n" +
                         "    " + "\"*\" - умножение (a * b)\r\n" +
                         "    " + "\"/\" - деление (a / b)\r\n" +
