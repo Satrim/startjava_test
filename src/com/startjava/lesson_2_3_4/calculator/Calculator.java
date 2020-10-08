@@ -24,28 +24,26 @@ public class Calculator {
             case "%" :
                 System.out.println(Integer.parseInt(task[0]) % Integer.parseInt(task[2]));
                 break;
-            case "^" : //возвращает число a, возведенное в степень b
+            case "^" : //число a возводит в степень b
                 System.out.println(Math.pow(Integer.parseInt(task[0]), Integer.parseInt(task[2])));
                 break;
-            case "fd" : //возвращает целочисленный результат деления a на b
+            case "fd" : //целочисленный результат деления a на b
                 System.out.println(Math.floorDiv(Integer.parseInt(task[0]), Integer.parseInt(task[2])));
                 break;
-            case "cbrt" : //возвращает кубический корень числа
+            case "cbrt" : //кубический корень числа
                 System.out.println(Math.cbrt(Double.parseDouble(task[0])));
                 break;
-            case "deg" : //переводит радианы в градусы
+            case "deg" : //радианы в градусы
                 System.out.println(Math.toDegrees(Double.parseDouble(task[0])));
                 break;
-            case "radians" : //переводит градусы в радианы
+            case "radians" : //градусы в радианы
                 System.out.println(Math.toRadians(Double.parseDouble(task[0])));
                 break;
-            case "cos" : //cos возвращает косинус угла
+            case "cos" : //косинус угла
                 System.out.println(Math.cos(Double.parseDouble(task[0])));
                 break;
-            case "radius" : //вычислим площадь круга:
+            case "radius" : //площадь круга:
                 System.out.println(Math.round(Math.PI * Math.pow(Integer.parseInt(task[0]), Integer.parseInt(task[2]))));
         }
-
-
     }
 }

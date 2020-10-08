@@ -21,7 +21,6 @@ public class CalculatorTest {
                         "    " + "\"cos\" - косинус угла (a cos)\r\n" +
                         "    " + "\"radius\" - площадь круга (a radius b)");
         while (answer.equals("да")) {
-
             System.out.print("Введите математическое выражение: ");
             calculator.mathExpression(scanner.nextLine());
             calculator.calculate();
