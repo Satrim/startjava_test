@@ -10,11 +10,13 @@ public class GuessNumberTest {
         System.out.print("Второй игрок, введите свое имя:");
         Player player2 = new Player(scanner.nextLine());
         System.out.println("Поприветствуем игроков, начнем игру!");
-
+        Player[] players = new Player[]{player1, player2};
         String answer = "да";
+
         while(answer.equals("да")) {
-            GuessNumber game = new GuessNumber(player1, player2);
+            GuessNumber game = new GuessNumber(players);
             game.run();
+
             do {
                 System.out.println("Ещё раз? [да/нет]: ");
                 answer = scanner.next();
