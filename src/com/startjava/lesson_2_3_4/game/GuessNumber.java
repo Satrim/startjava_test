@@ -18,11 +18,11 @@ public class GuessNumber {
             int number;
 
             for(int j = 0; j < players.length; j++) {
-                System.out.println("Игрок " + players[j].getName() + " введите номер. У вас " + (10 - i) + " попыток");
+                System.out.println("Игрок " + players[j].getName() + " введите число. У вас осталось попыток: " + (10 - i));
                 number = scanner.nextInt();
                 if (checkNumber(number)) {
                     System.out.println("Игрок " + players[j].getName() + " угадал число " + number + " с " + (i + 1) + " попытки");
-                    clearArrayOfAttempt(players, i);
+                    clearEnteredNums(players, i);
                     return;
                 } else {
                     players[j].putNumber(number, i);
@@ -32,35 +32,33 @@ public class GuessNumber {
                 }
             }
         }
-        printArrayOfAttempts();
-        clearArrayOfAttempt(players, 10);
+        showEnteredNums();
+        clearEnteredNums(players, 10);
     }
 
     private boolean checkNumber(int number) {
-        boolean isNumber = false;
-        if (hiddenNumber > number) {
-            System.out.println("Введенное вами число " + number + " меньше того, что загадал компьютер");
-        } else if (hiddenNumber < number) {
-            System.out.println("Введенное вами число " + number + " больше того, что загадал компьютер");
-        } else {
-            isNumber = true;
+        boolean isGuess = false;
+        if (hiddenNumber == number) {
+            return true;
         }
-        return isNumber;
+        System.out.println(hiddenNumber > number ? "Введенное вами число " + number + " меньше того, что загадал компьютер" :
+                "Введенное вами число " + number + " больше того, что загадал компьютер");
+        return isGuess;
     }
 
-    private void printArrayOfAttempts() {
+    private void showEnteredNums() {
         for (Player player : players) {
-            System.out.print("Номера введенные игроком " + player.getName() + ": ");
-            for (Integer numbers : player.getAttempts()) {
+            System.out.print("Числa введенные игроком " + player.getName() + ": ");
+            for (int numbers : player.getAttempts()) {
                 System.out.print(numbers + " ");
             }
             System.out.println();
         }
     }
 
-    public void clearArrayOfAttempt(Player[] players, int index) {
+    public void clearEnteredNums(Player[] players, int index) {
         for (Player player : players) {
-            player.clearAttempts(index);
+            player.clear(index);
         }
     }
 }

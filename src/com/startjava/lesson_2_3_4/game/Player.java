@@ -10,7 +10,7 @@ public class Player {
         this.name = name;
     }
 
-    void clearAttempts(int index) {
+    void clear(int index) {
         Arrays.fill(attempts, 0, index, 0);
     }
 
