@@ -14,8 +14,8 @@ public class Player {
         return name;
     }
 
-    public int[] getAttempts() {
-        return Arrays.copyOf(attempts, 10);
+    public int[] getAttempts(int index) {
+        return Arrays.copyOf(attempts, index);
     }
 
     public void clear(int index) {
@@ -25,9 +25,4 @@ public class Player {
     public void setNumber(int number, int index) {
         attempts[index] = number;
     }
-
-//    public int finalNumber() {
-//        return attempts[attempts.length - 1];
-//    }
-
 }
