@@ -22,10 +22,10 @@ public class GuessNumber {
                 number = scanner.nextInt();
                 if (checkNumber(number)) {
                     System.out.println("Игрок " + players[j].getName() + " угадал число " + number + " с " + (i + 1) + " попытки");
-                    clearEnteredNums(players, i);
+                    clearEnteredNums(i);
                     return;
                 } else {
-                    players[j].putNumber(number, i);
+                    players[j].setNumber(number, i);
                     if (i == 9) {
                         System.out.println("У игрока " + players[j].getName() + " закончились попытки");
                     }
@@ -33,7 +33,7 @@ public class GuessNumber {
             }
         }
         showEnteredNums();
-        clearEnteredNums(players, 10);
+        clearEnteredNums(10);
     }
 
     private boolean checkNumber(int number) {
@@ -49,14 +49,14 @@ public class GuessNumber {
     private void showEnteredNums() {
         for (Player player : players) {
             System.out.print("Числa введенные игроком " + player.getName() + ": ");
-            for (int numbers : player.getAttempts()) {
-                System.out.print(numbers + " ");
+            for (int number : player.getAttempts()) {
+                System.out.print(number + " ");
             }
             System.out.println();
         }
     }
 
-    public void clearEnteredNums(Player[] players, int index) {
+    public void clearEnteredNums(int index) {
         for (Player player : players) {
             player.clear(index);
         }

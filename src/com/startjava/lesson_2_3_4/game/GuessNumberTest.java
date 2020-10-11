@@ -8,13 +8,13 @@ public class GuessNumberTest {
         System.out.print("Добро пожаловать в игру \"Угадай число\". Введите количество игроков: ");
         Player[] players = new Player[scanner.nextInt()];
 
-        for (int i = 0; i < players.length; i ++) {
-            players[i] = gamePlayer(i);
+        for (int i = 0; i < players.length; i++) {
+            players[i] = createPlayer(i);
         }
 
         String answer = "да";
 
-        while(answer.equals("да")) {
+        do {
             GuessNumber game = new GuessNumber(players);
             game.run();
 
@@ -22,10 +22,10 @@ public class GuessNumberTest {
                 System.out.println("Ещё раз? [да/нет]: ");
                 answer = scanner.next();
             } while(!answer.equals("да") && !answer.equals("нет"));
-        }
+        } while(answer.equals("да"));
     }
 
-    public static Player gamePlayer(int i) {
+    private static Player createPlayer(int i) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Игрок " + (i + 1) + " введите свое имя: ");
         return new Player(scanner.nextLine());

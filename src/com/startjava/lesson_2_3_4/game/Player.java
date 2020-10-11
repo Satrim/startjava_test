@@ -10,20 +10,24 @@ public class Player {
         this.name = name;
     }
 
-    void clear(int index) {
-        Arrays.fill(attempts, 0, index, 0);
-    }
-
-    void putNumber(int number, int index) {
-        attempts[index] = number;
-    }
-
-    public int[] getAttempts() {
-        return attempts;
-    }
-
     public String getName() {
         return name;
     }
+
+    public int[] getAttempts() {
+        return Arrays.copyOf(attempts, 10);
+    }
+
+    public void clear(int index) {
+        Arrays.fill(attempts, 0, index, 0);
+    }
+
+    public void setNumber(int number, int index) {
+        attempts[index] = number;
+    }
+
+//    public int finalNumber() {
+//        return attempts[attempts.length - 1];
+//    }
 
 }
