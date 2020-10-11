@@ -10,6 +10,7 @@ public class GuessNumber {
     Scanner scanner = new Scanner(System.in);
     private int amountAttemptPlayer;
     private int amountAttemptGeneral = 10;
+
     public GuessNumber(Player[] players) {
         this.players = players;
     }
